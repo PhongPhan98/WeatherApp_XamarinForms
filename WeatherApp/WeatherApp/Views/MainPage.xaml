@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:WeatherApp.Views"
+             x:Class="WeatherApp.MainPage">
+
+    <Shell.FlyoutHeader>
+        <local:HeaderContentView/>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="MyTabApp"
+               Shell.TabBarIsVisible="False"
+               FlyoutDisplayOptions="AsMultipleItems">
+
+        <Tab Icon="home_icon" Title="Home Page" >
+            <ShellContent ContentTemplate="{DataTemplate local:CurrentWeatherPage}"/>
+        </Tab>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="MyTabApp"
+               Shell.TabBarIsVisible="False"
+               FlyoutDisplayOptions="AsMultipleItems">
+
+        <Tab Icon="add_icon" Title="Add another place" >
+            <ShellContent ContentTemplate="{DataTemplate local:AddPlace}"/>
+        </Tab>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="MyTabApp"
+               Shell.TabBarIsVisible="False"
+               FlyoutDisplayOptions="AsMultipleItems">
+
+        <Tab Icon="contact_sign.png" Title="Contact me"  >
+            <ShellContent ContentTemplate="{DataTemplate local:Contact}"/>
+        </Tab>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="MyTabApp"
+               Shell.TabBarIsVisible="False"
+               FlyoutDisplayOptions="AsMultipleItems">
+
+        <Tab Icon="about.png" Title="About" >
+            <ShellContent ContentTemplate="{DataTemplate local:About}"/>
+        </Tab>
+    </FlyoutItem>
+    <MenuItem Text="Version 0.1"
+              IconImageSource="help_icon" />
+</Shell>

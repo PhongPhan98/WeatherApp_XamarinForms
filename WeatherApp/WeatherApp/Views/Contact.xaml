@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Contact Page"
+             x:Class="WeatherApp.Views.Contact">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="btnCall" Text="Phone Call" Clicked="btnCall_Clicked"/>
+            <Button x:Name="btnMess" Text="Message" Clicked="btnMess_Clicked"/>
+            <Button x:Name="btnEmail" Text="Email" Clicked="btnEmail_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
